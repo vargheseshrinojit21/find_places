@@ -1,0 +1,88 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background image for the entire body */
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/doctor-stethoscope-hand-hospital-background-gown-94227568.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #333; /* Text color */
+}
+
+/* Basic styling */
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+#filters {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#reviews {
+    padding: 20px;
+}
+
+.review {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.review h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Hover effect for reviews */
+.review:hover {
+    background-color: #efefef; /* Light Yellow */
+    transform: scale(1.02);
+}
+
+/* Additional colorful styles */
+.review:nth-child(odd) {
+    background-color: transparent;
+}
+
+.review:nth-child(even) {
+    background-color: transparent;
+}
+
+#filters button {
+    background-color: #63ace5; /* Blue */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filters button:hover {
+    background-color: #3d8af7; /* Darker Blue */
+}

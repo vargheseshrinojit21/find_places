@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Place Reviews</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a background image for the entire body */
+        body {
+            background: url('https://t3.ftcdn.net/jpg/02/16/47/22/360_F_216472247_cT66WDoS0fp1s3wC7eaykMJNDGVbOBPq.jpg') center/cover no-repeat;
+            font-family: Arial, sans-serif;
+            color: #333; /* Text color */
+        }
+
+        /* Basic styling */
+        header {
+            text-align: center;
+            padding: 10px;
+        }
+
+        #filters, #reviews {
+            padding: 20px;
+        }
+
+        #filters {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .review {
+            display: flex; /* Align reviews in a row */
+            align-items: center; /* Center items vertically */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .review img {
+            max-width: 100px; /* Adjust the image width as needed */
+            margin-right: 15px; /* Space between image and review content */
+        }
+
+        .review h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .review p {
+            margin: 5px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Hover effect for reviews */
+        .review:hover {
+            background-color: #efefef; /* Light Yellow */
+            transform: scale(1.02);
+        }
+
+        /* Additional colorful styles */
+        .review:nth-child(odd), .review:nth-child(even) {
+            background-color: transparent;
+        }
+
+        #filters button {
+            background-color: #63ace5; /* Blue */
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #filters button:hover {
+            background-color: #3d8af7; /* Darker Blue */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Place Reviews</h1>
+    </header>
+    
+    <section id="filters">
+        <h2>Filters</h2>
+        <label>
+            <input type="checkbox" id="disabilityFacilityCheckbox"> Disability Facilities
+        </label>
+        <label>
+            <input type="checkbox" id="foodFacilityCheckbox"> Food Facilities
+        </label>
+        <label>
+            <input type="checkbox" id="parkingFacilityCheckbox"> Parking Facilities
+        </label>
+    </section>
+    
+    <section id="reviews">
+        <h2>Reviews</h2>
+        <div class="review">
+            <img src="https://cdn.apollohospitals.com/dev-apollohospitals/2022/05/apollo-proton_mobile-613c4b376e4c8-1-3.jpg" alt="Review Image 1"> <!-- Image URL for the first review -->
+            <div>
+                <h3>APOLLO</h3>
+                <p class="disability-facility">Disability Facilities: Yes,WHEELCHAIR, STRETCHER, LIFT</p>
+                <p class="parking-facility">Parking Facilities: Yes</p>
+                <p class="food-facility">Food Facilities: Yes</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://ehealth.eletsonline.com/wp-content/uploads/2019/09/Sri-Kauvery-Medical-Care.jpg" alt="Review Image 2"> <!-- Image URL for the second review -->
+            <div>
+                <h3>KAUVERY</h3>
+                <p class="disability-facility">Disability Facilities: Yes, WHEELCHAIR, STRETCHER, LIFT</p>
+                <p class="parking-facility">Parking Facilities: Yes</p>
+                <p class="food-facility">Food Facilities: Yes</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://images.jdmagicbox.com/comp/chennai/m8/044pxx44.xx44.170601090841.a6m8/catalogue/dr-aashish-chopra-the-madras-medical-mission-hospital--mogappair-east-chennai-cardiologists-aq0sq.jpg" alt="Review Image 3"> <!-- Image URL for the third review -->
+            <div>
+                <h3>MADRAS MEDICAL MISSION</h3>
+                <p class="disability-facility">Disability Facilities: No</p>
+                <p class="parking-facility">Parking Facilities: No</p>
+                <p class="food-facility">Food Facilities: Yes</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://content.jdmagicbox.com/comp/chennai/86/044p5424986/catalogue/aysha-hospitals-pvt-ltd-kilpauk-chennai-multispeciality-hospitals-72jrfmqkk5.jpg?clr=39392d" alt="Review Image 4"> <!-- Image URL for the fourth review -->
+            <div>
+                <h3>AYSHA</h3>
+                <p class="disability-facility">Disability Facilities: No</p>
+                <p class="parking-facility">Parking Facilities: Yes</p>
+                <p class="food-facility">Food Facilities: No</p>
+            </div>
+        </div>
+        <!-- More reviews can be added here with unique image URLs -->
+    </section>
+
+    <script>
+        const disabilityFacilityCheckbox = document.getElementById("disabilityFacilityCheckbox");
+        const foodFacilityCheckbox = document.getElementById("foodFacilityCheckbox");
+        const parkingFacilityCheckbox = document.getElementById("parkingFacilityCheckbox");
+        const reviews = document.querySelectorAll(".review");
+
+        function updateFilters() {
+            reviews.forEach(review => {
+                const disabilityInfo = review.querySelector(".disability-facility");
+                const foodInfo = review.querySelector(".food-facility");
+                const parkingInfo = review.querySelector(".parking-facility");
+
+                const showDisability = !disabilityFacilityCheckbox.checked || disabilityInfo.textContent.includes("Yes");
+                const showFood = !foodFacilityCheckbox.checked || foodInfo.textContent.includes("Yes");
+                const showParking = !parkingFacilityCheckbox.checked || parkingInfo.textContent.includes("Yes");
+
+                if (showDisability && showFood && showParking) {
+                    review.style.display = "flex"; 
+                } else {
+                    review.style.display = "none";
+                }
+            });
+        }
+
+        disabilityFacilityCheckbox.addEventListener("change", updateFilters);
+        foodFacilityCheckbox.addEventListener("change", updateFilters);
+        parkingFacilityCheckbox.addEventListener("change", updateFilters);
+
+        updateFilters(); // Initial update when the page loads
+    </script>
+</body>
+</html>

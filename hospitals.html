@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* Add this CSS to your HTML file within a <style> tag */
+    /* Style the search container */
+    .search-container {
+      display: none; /* Hide the search container by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      z-index: 9999; /* Ensure it's above other content */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Style the search box */
+    .search-box {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      max-width: 300px; /* Adjust the width as needed */
+      width: 90%;
+      padding: 10px;
+    }
+
+    .search-input {
+      flex-grow: 1;
+      border: none;
+      padding: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-submit {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-submit:hover {
+      background-color: #0056b3; /* Darker color on hover */
+    }
+
+    .search-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Adjust the styles for the close button icon (you can use an X or any other icon) */
+    .search-close-btn::before {
+      content: '✖';
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hospitals</title>
+
+ 
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assetshos/cssres/styleres.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assetshos/images/hero-banner.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assetshos/images/hero-banner-bg.png" media="min-width(768px)">
+
+
+</head>
+
+<body id="top">
+
+
+  <!-- 
+    - #HEADER
+  -->
+  
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">Hospitals<span class="span">.</span></a>
+      </h1>
+      
+
+    
+
+      <div class="header-btn-group">
+        <button class="search-btn" aria-label="Search" data-search-btn>
+          <ion-icon name="search-outline"></ion-icon>
+          
+        </button>
+
+       
+
+        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+          
+        </button>
+      </div>
+
+    </div>
+    
+    
+  </header>
+  
+  
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-container>
+
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+        class="search-input">
+
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" style="background-image: url('https://i.pinimg.com/originals/b8/23/e3/b823e38cc01fdb9278b6f7faa2feda6d.gif')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Health is Wealth</p>
+
+            <h2 class="h1 hero-title">Hospitals in Chennai</h2>
+
+           
+          </div>
+
+          <figure class="hero-banner">
+            
+
+            
+              
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROMO
+      -->
+      <div class="search-bar">
+        <form action="https://www.google.com/maps" method="get" target="_blank">
+          <input type="text" name="q" placeholder="Search on Google Maps" required>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <section class="section section-divider white promo">
+        <div class="container">
+
+          <ul class="promo-list has-scrollbar">
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+
+                <a href="https://www.google.com/maps/place/Pizza+Hut/@13.0852185,80.2040946,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipMU0p0Hbm14-lwCa07PMEctxNGBUqXcJm3r5L3G!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMU0p0Hbm14-lwCa07PMEctxNGBUqXcJm3r5L3G%3Dw114-h86-k-no!7i3264!8i2448!9m2!1b1!2i49!4m7!3m6!1s0x3a52657968ff1711:0x2c2ba2cb36d85f44!8m2!3d13.085456!4d80.204104!10e5!16s%2Fg%2F11j5pwsvss?entry=ttu"><a href="https://www.google.com/maps/place/Apollo+Cancer+Centre+Teynampet/@13.0341673,80.2448993,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipOzd5JNtf3O7b7QCGB99V-dIv5_F_9FQnMOLzGs!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOzd5JNtf3O7b7QCGB99V-dIv5_F_9FQnMOLzGs%3Dw137-h86-k-no!7i2560!8i1600!9m2!1b1!2i51!4m7!3m6!1s0x3a526428e96f20d7:0xaf9c77bca70c83fd!8m2!3d13.0337169!4d80.2451938!10e5!16s%2Fg%2F11b6cc6kvj?entry=ttu"><h3 class="h3 card-title">Apollo</h3></a>
+
+                <p class="card-text">
+                  We Deliver High Quality Medical Treatment . Consult Our Expert Surgeons in Apollo Hospitals Chennai.
+                </p>
+
+                <a href="ab.html"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2019-09/26/full/1569443445-9985.jpg?im=FeatureCrop,size=(826,465)" width="300" height="300" loading="lazy" alt="Maxican Pizza"
+                  class="w-100 card-banner"></a>
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                
+
+                <a href="google.com/maps/place/Cream+and+Fudge/@13.0809308,80.1974293,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipMBk5-H77D-x23PEOrdIKZoNq4iusBiOu0RnDDU!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMBk5-H77D-x23PEOrdIKZoNq4iusBiOu0RnDDU%3Dw114-h86-k-no!7i4160!8i3120!9m2!1b1!2i49!4m7!3m6!1s0x3a5265fd302a2515:0x3104c98e6f45eef!8m2!3d13.080602!4d80.197394!10e5!16s%2Fg%2F11f6nfgrfq?entry=ttu"><h3 class="h3 card-title">Kauvery Hospital</h3></a>
+
+                <p class="card-text">
+                  Kauvery Hospital is a leading, multi-speciality hospital offering best-in-class medical services for nearly 2 decades. 
+                </p>
+
+                <a href="ab.html"><img src="data:image/jpeg;base64,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" width="300" height="300" loading="lazy" alt="kavery"
+                  class="w-100 card-banner"></a>
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                
+
+               <a href="https://www.google.com/maps/place/KFC/@13.0852189,80.2040821,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipP038BRl4qLP6gOtUG5zocEbWxKpXI8nuzDhBMZ!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipP038BRl4qLP6gOtUG5zocEbWxKpXI8nuzDhBMZ%3Dw172-h86-k-no!7i4000!8i2000!9m2!1b1!2i49!4m7!3m6!1s0x3a52641bff96aad1:0x5de80fd99069f726!8m2!3d13.085431!4d80.20412!10e5!16s%2Fg%2F1v_n9yp2?entry=ttu"> <h3 class="h3 card-title">Madras Medicals</h3></a>
+
+                <p class="card-text">
+            
+                  The Madras Medical  is  leading speciality hospital. Our doctors give the best  healthcare to ensure healthy.
+                </p>
+
+                <img src="https://images.collegedunia.com/public/college_data/images/campusimage/14178668957.jpg" width="300" height="300" loading="lazy" alt="French Fry"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+
+            <li class="promo-item">
+              <div class="promo-card">
+
+                
+                <a href="https://www.google.com/maps/place/Burger+King/@13.0759644,80.1982467,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipMehsjK7lV-9DEg5_i51LGC2BiljWdshsEHEmij!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMehsjK7lV-9DEg5_i51LGC2BiljWdshsEHEmij%3Dw86-h114-k-no!7i6120!8i8160!9m2!1b1!2i49!4m7!3m6!1s0x3a526553d10fd7cb:0x1c67bac69354ea04!8m2!3d13.0759644!4d80.1982467!10e5!16s%2Fg%2F11h713dnhx?entry=ttu"><h3 class="h3 card-title">Aysha Hospital</h3></a>
+
+                <p class="card-text">
+                  Aysha Hospitals Pvt Ltd in Kilpauk, Chennai is a top player in the category Hospitals in the Chennai.
+                </p>
+
+                <img src="https://doctorlistingingestionpr.blob.core.windows.net/doctorprofilepic/1670560854302_HospitalProfileImage_329f640b-629b-4808-84a6-1f026dbd1934.png" width="300" height="300" loading="lazy" alt="Burger Kingo"
+                  class="w-100 card-banner">
+
+              </div>
+            </li>
+           
+            
+
+            
+      </section>
+
+
+      <div style="text-align:center;">
+       <center> <button class="btn redirect-btn">Go to Feedback</button></center>
+      </div>
+      <script>
+        document.querySelector('.redirect-btn').addEventListener('click', function () {
+          // Redirect to feedback.html
+          window.location.href = 'feedback.html';
+        });
+      </script>
+
+
+     
+
+
+      <!-- 
+        - #FOOD MENU
+      -->
+
+      <section class="section food-menu" id="food-menu">
+        <div class="container">
+
+          <p class="section-subtitle">Healthy Life</p>
+
+          <h2 class="h2 section-title">
+            Our Specialities <span class="span">Hospitals</span>
+          </h2>
+
+
+
+          
+          <ul class="food-menu-list">
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2020/10/26/15/northwickpark26102020.jpg?width=1200&height=1200&fit=crop" width="300" height="300" loading="lazy"
+                    alt="Fried Chicken Unlimited" class="w-100">
+
+                  <div class="badge">24 Hours</div>
+
+                  <button class="btn food-menu-btn">Cardiac</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <a href="https://www.google.com/maps/place/The+Flying+Elephant/@13.0109686,80.2234517,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipNPrjEA1TRFG6Uiw1RDdlXgu_ZxtGwo8ITvxkPN!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNPrjEA1TRFG6Uiw1RDdlXgu_ZxtGwo8ITvxkPN%3Dw128-h86-k-no!7i4000!8i2667!9m2!1b1!2i49!4m7!3m6!1s0x3a526772e0468643:0xd748c56bf222e23a!8m2!3d13.0108519!4d80.2233979!10e5!16s%2Fg%2F1hjhb0hvm?entry=ttu"><h3 class="h3 card-title">Vijaya Groups</h3></a>
+
+                <div class="price-wrapper">
+
+                  
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://content.jdmagicbox.com/comp/chennai/k8/044pxx44.xx44.090625112318.a2k8/catalogue/apollo-children-s-hospital-thousand-lights-chennai-paediatricians-8mjoi15mwq.jpg?clr=" width="300" height="300" loading="lazy"
+                    alt="Burger King Whopper" class="w-100">
+
+                  <div class="badge">10 A.M-10 P.M</div>
+
+                  <button class="btn food-menu-btn">Pediatric</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Avartana/@13.0105048,80.221056,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipPbYVl5ZPASZGOFOBsUtG_UQzQV-jlRqr9YzuU_!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPbYVl5ZPASZGOFOBsUtG_UQzQV-jlRqr9YzuU_%3Dw172-h86-k-no!7i1600!8i800!9m2!1b1!2i49!4m7!3m6!1s0x3a52673d0e406a19:0x167382256c93d643!8m2!3d13.010511!4d80.220708!10e5!16s%2Fg%2F11g0kk1sy_?entry=ttu"><h3 class="h3 card-title">Apollo Childrens</h3></a>
+
+                <div class="price-wrapper">
+
+
+                  
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://imgmedia.lbb.in/media/2020/04/5ea6e640a45d8267e5e17e3b_1587996224341.jpg" width="300" height="300" loading="lazy"
+                    alt="Burger King Whopper" class="w-100">
+
+                  <div class="badge">9 A.M - 5 P.M</div>
+
+                  <button class="btn food-menu-btn">Veterinary</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Taj+Fisherman's+Cove+Resort+%26+Spa/@12.7970926,80.2479675,3a,75y,90t/data=!3m11!1e2!3m9!1sAF1QipMZgQ417PZFLkSdy6HzaqxC6I9FlTTWBRMCg6CM!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMZgQ417PZFLkSdy6HzaqxC6I9FlTTWBRMCg6CM%3Dw129-h86-k-no!7i1170!8i780!9m2!1b1!2i49!4m10!3m9!1s0x3a5261d01abb7cdd:0xbdd0608a45598857!5m2!4m1!1i2!8m2!3d12.7975678!4d80.2482194!10e5!16s%2Fm%2F05h49jr?entry=ttu"><h3 class="h3 card-title">JP Pet Clinic</h3></a>
+
+                <div class="price-wrapper">
+
+                  
+                 
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://content.jdmagicbox.com/comp/chennai/r1/044pxx44.xx44.110505124337.z6r1/catalogue/deepam-hospitals-tambaram-west-chennai-private-hospitals-vd728qca6m-250.jpg?clr=" width="300" height="300" loading="lazy"
+                    alt="Bell Burrito Supreme" class="w-100">
+
+                  <div class="badge">24 Hours</div>
+
+                  <button class="btn food-menu-btn">Neuro</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Deepam Hospital</h3>
+
+                <div class="price-wrapper">
+
+                  
+
+                  
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://content.jdmagicbox.com/comp/varanasi/p5/0542px542.x542.210917173100.f7p5/catalogue/agrim-hospital-pvt-ltd-ravindrapuri-varanasi-hospitals-u6ensios2o-250.jpg" width="300" height="300" loading="lazy"
+                    alt="Kung Pao Chicken BBQ" class="w-100">
+
+                  <div class="badge">9 A.M - 6 P.M</div>
+
+                  <button class="btn food-menu-btn">Pshychartist</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Agry Groups</h3>
+
+                <div class="price-wrapper">
+
+               <div class ="price-details">
+         
+</div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="food-menu-card">
+
+                <div class="card-banner">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD1D7qtb47dTSfkRcCBebjFP9Dzj3NZCaFuujuTzOlCkvubpFouaCWj3_-TSVGRWhYgwc&usqp=CAU" width="300" height="300" loading="lazy"
+                    alt="Wendy's Chicken" class="w-100">
+
+                  <div class="badge">24 Hours</div>
+
+                  <button class="btn food-menu-btn">Eye Vision</button>
+                </div>
+
+                <div class="wrapper">
+                  <p class="category">Ratings</p>
+
+                  <div class="rating-wrapper">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                </div>
+
+                <h3 class="h3 card-title">Aravind Eye Care</h3>
+
+                <div class="price-wrapper">
+
+                
+
+                  
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top" style="background-image: url('./assetshos/images/footer-illustration.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          
+
+         
+
+          
+
+        </div>
+
+        
+
+
+        
+
+            
+
+         
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+
+        </p>
+      </div>
+    </div>
+   
+
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assetshos/js/scriptres.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: url('https://plus.unsplash.com/premium_photo-1661432769134-758550b8fedb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80'); /* Add your background image URL for the entire page here */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-color: rgba(255, 255, 255, 0.9); /* Add an overlay color to improve readability */
+        }
+
+        .feedback-section {
+            margin: 20px auto;
+            width: 60%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-image: url('hospital-background.jpg'); /* Add your background image URL here */
+            background-size: cover;
+        }
+
+        h2 {
+            color: #eef1eb;
+        }
+
+        .hospital-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white; /* Add this line to set text color to white */
+        }
+        
+/* Style for the feedback input box */
+.user-feedback {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+        .submit-feedback-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-feedback-button:hover {
+            background-color: #0056b3;
+        }
+
+        .feedback-list {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-section" style="background-image: url('data:image/jpeg;base64,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');">
+        <div class="hospital-name">PIZZA HUT</div>
+        <h2>Leave your feedback:</h2>
+        <textarea class="user-feedback" rows="4" placeholder="Type your feedback here"></textarea>
+        <br>
+        <button class="submit-feedback-button">Submit Feedback</button>
+        <div class="feedback-list">
+            <h2 style="color: black;">Feedback Received:</h2>
+
+            <ul class="feedback-ul"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section" style="background-image: url('https://wallpapers.com/images/hd/restaurant-background-2ez77umko2vj5w02.jpg');">
+        <div class="hospital-name">CREAM AND FUDGE</div>
+        <h2>Leave your feedback:</h2>
+        <textarea class="user-feedback" rows="4" placeholder="Type your feedback here"></textarea>
+        <br>
+        <button class="submit-feedback-button">Submit Feedback</button>
+        <div class="feedback-list">
+            <h2 style="color: black;">Feedback Received:</h2>
+
+            <ul class="feedback-ul"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section" style="background-image: url('https://wallpapers.com/images/hd/restaurant-background-fqxbzampnmnommt0.jpg');">
+        <div class="hospital-name">KFC</div>
+        <h2>Leave your feedback:</h2>
+        <textarea class="user-feedback" rows="4" placeholder="Type your feedback here"></textarea>
+        <br>
+        <button class="submit-feedback-button">Submit Feedback</button>
+        <div class="feedback-list">
+            <h2 style="color: black;">Feedback Received:</h2>
+
+            <ul class="feedback-ul"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section" style="background-image: url('https://t3.ftcdn.net/jpg/05/66/54/16/360_F_566541693_WljU6enGuKCBVEn9vXhdCXL4uZ7wb6Xb.jpg');">
+        <div class="hospital-name">BURGER KING</div>
+        <h2>Leave your feedback:</h2>
+        <textarea class="user-feedback" rows="4" placeholder="Type your feedback here"></textarea>
+        <br>
+        <button class="submit-feedback-button">Submit Feedback</button>
+        <div class="feedback-list">
+            <h2 style="color: black;">Feedback Received:</h2>
+
+            <ul class="feedback-ul"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle feedback submission for each hospital
+        const submitFeedbackButtons = document.querySelectorAll(".submit-feedback-button");
+
+        submitFeedbackButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const feedbackText = button.previousElementSibling.value;
+                if (feedbackText.trim() !== "") {
+                    const feedbackList = button.nextElementSibling.querySelector(".feedback-ul");
+                    const listItem = document.createElement("li");
+                    listItem.textContent = feedbackText;
+                    feedbackList.appendChild(listItem);
+                    button.previousElementSibling.value = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

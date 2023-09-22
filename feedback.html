@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG9zcgl0YWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .feedback-section {
+            margin: 20px auto;
+            width: 60%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-image: url('https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG9zcgl0YWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80');
+            background-size: cover;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .hospital-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .user-feedback {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .submit-feedback-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-feedback-button:hover {
+            background-color: #0056b3;
+        }
+
+        .feedback-list {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .user-form {
+            text-align: left;
+        }
+
+        .user-form input,
+        .user-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-section">
+        <div class="hospital-name">Kavery Hospital</div>
+        <h2>Leave your feedback:</h2>
+        <div class="user-form">
+            <input type="text" id="name1" placeholder="Your Name">
+            <input type="tel" id="phone1" placeholder="Your Phone Number">
+            <textarea class="user-feedback" id="feedback1" rows="4" placeholder="Type your feedback here"></textarea>
+            <button class="submit-feedback-button" onclick="submitFeedback(1)">Submit Feedback</button>
+        </div>
+        <div class="feedback-list">
+            <h2>Feedback Received:</h2>
+            <ul class="feedback-ul" id="feedbackList1"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <div class="hospital-name">Apollo Hospital</div>
+        <h2>Leave your feedback:</h2>
+        <div class="user-form">
+            <input type="text" id="name2" placeholder="Your Name">
+            <input type="tel" id="phone2" placeholder="Your Phone Number">
+            <textarea class="user-feedback" id="feedback2" rows="4" placeholder="Type your feedback here"></textarea>
+            <button class="submit-feedback-button" onclick="submitFeedback(2)">Submit Feedback</button>
+        </div>
+        <div class="feedback-list">
+            <h2>Feedback Received:</h2>
+            <ul class="feedback-ul" id="feedbackList2"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <div class="hospital-name">Madras Hospital</div>
+        <h2>Leave your feedback:</h2>
+        <div class="user-form">
+            <input type="text" id="name3" placeholder="Your Name">
+            <input type="tel" id="phone3" placeholder="Your Phone Number">
+            <textarea class="user-feedback" id="feedback3" rows="4" placeholder="Type your feedback here"></textarea>
+            <button class="submit-feedback-button" onclick="submitFeedback(3)">Submit Feedback</button>
+        </div>
+        <div class="feedback-list">
+            <h2>Feedback Received:</h2>
+            <ul class="feedback-ul" id="feedbackList3"></ul>
+        </div>
+    </div>
+
+    <div class="feedback-section">
+        <div class="hospital-name">Aysha Hospital</div>
+        <h2>Leave your feedback:</h2>
+        <div class="user-form">
+            <input type="text" id="name4" placeholder="Your Name">
+            <input type="tel" id="phone4" placeholder="Your Phone Number">
+            <textarea class="user-feedback" id="feedback4" rows="4" placeholder="Type your feedback here"></textarea>
+            <button class="submit-feedback-button" onclick="submitFeedback(4)">Submit Feedback</button>
+        </div>
+        <div class="feedback-list">
+            <h2>Feedback Received:</h2>
+            <ul class="feedback-ul" id="feedbackList4"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle feedback submission for each hospital
+        function submitFeedback(hospitalId) {
+            const name = document.getElementById(`name${hospitalId}`).value;
+            const phone = document.getElementById(`phone${hospitalId}`).value;
+            const feedbackText = document.getElementById(`feedback${hospitalId}`).value;
+            const feedbackList = document.getElementById(`feedbackList${hospitalId}`);
+
+            if (feedbackText.trim() !== "") {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<strong>Name:</strong> ${name}<br><strong>Phone Number:</strong> ${phone}<br><strong>Feedback:</strong> ${feedbackText}`;
+                feedbackList.appendChild(listItem);
+
+                // Clear the form fields after submission
+                document.getElementById(`name${hospitalId}`).value = "";
+                document.getElementById(`phone${hospitalId}`).value = "";
+                document.getElementById(`feedback${hospitalId}`).value = "";
+            }
+        }
+    </script>
+</body>
+</html>
